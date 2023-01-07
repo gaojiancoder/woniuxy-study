@@ -24,5 +24,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+
+        <!--视图渲染器 view resolver-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 </project>
