@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple MyBatisPlusMain.
  */
 public class AppTest 
     extends TestCase
