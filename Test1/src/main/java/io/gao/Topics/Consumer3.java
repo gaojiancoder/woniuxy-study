@@ -23,7 +23,8 @@ public class Consumer3 {
         channel.queueBind("topic02", Exchange_name, "lazy.#");
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
-c        };
+            System.out.println("lazy接收到的消息" + new String(message.getBody()));
+        };
         CancelCallback cancelCallback = consumerTag -> {
         };
         channel.basicConsume("topic02", true, deliverCallback, cancelCallback);
