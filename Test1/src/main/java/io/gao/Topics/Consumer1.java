@@ -20,7 +20,7 @@ public class Consumer1 {
         channel.queueBind("topic01", Exchange_name, "*.orange.*");
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
-            System.out.println("*。orange。*接收到的消息" + message.getBody());
+            System.out.println("orange" + new String(message.getBody()));
         };
         CancelCallback cancelCallback = consumerTag -> {
         };
