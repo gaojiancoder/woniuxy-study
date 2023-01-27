@@ -21,6 +21,8 @@ public class Consumer2 {
         channel.queueDeclare("topic02", false, false, false, null);
         //绑定队列和路由key
         channel.queueBind("topic02", Exchange_name, "*.*.rabbit");
+        channel.queueBind("topic02", Exchange_name, "lazy.#");
+
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             System.out.println("rabbit接收到的消息" + new String(message.getBody()));
